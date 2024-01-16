@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+   
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Övningar JS</h1>
+
+    <div class="wrapper">
+    <div class="practice_Level-up">
+        <h2 class="heading">Level-up: Övning 1</h2>
+        <p id="text"></p>
+    </div>
+
+    <div class="practice_Level-up">
+        <h2 class="heading">Level-up: Övning 2</h2>
+        <p>Give me a number <input type="number" id="number1"> <br>And then another one 
+        <input type="number" id="number2"></span><br> Let me 
+        <button id="button">calculate</button>
+         the result for you here:<br>
+        The sum of the numbers is: <span id="sum"></span><br>
+        The difference of the numbers is: <span id="difference"></span><br>
+        The product of the numbers is: <span id="product"></span><br>
+        </p>
+    </div>
+
+    <div class="practice_Level-up">
+        <h2 class="heading">Level-up: Övning 3</h1>
+        <p>Let's try something different!<br> Give me a number with a decimal<input type="number" name="" id="number3"><br> and I'll <button id="btn_roundItUp">round it up for ya!</button> <br>
+        <span id="round"></span><br>
+        <span id="lessRound"></span>
+        </p>
+    </div>
+
+    <div class="practice_Conditions">
+        <h2 class="heading">Villkor: Övning 1</h2>
+        <p>Enter your password: <input type="password" id="passwordInput"><br> <button class="checkPassword" id="btn_checkPassword">Log in</button></p>
+    </div>
+
+    <div class="practice_Conditions">
+        <h2 class="heading">Villkor: Övning 2</h2>
+        <p>Give me a number <input type="number" id="number4"> 
+        and I'll tell you if it's smaller or greater than 100 <button id="btn_checkNumber">Tell me</button></p>
+        <p id="answer"></p>
+    </div>
+
+    <div class="practice_Conditions">
+        <h2 class="heading">Villkor: Övning 3</h2>
+        <p>Let's play a game!<br> Guess a number between 1 and 100</p>
+        <input type="number" name="" id="guess">
+        <button id="btn_guessTheNumber">Guess</button>
+        <p id="message"></p>
+    </div>
+
+    <div class="practice_DOM">
+        <h2 class="heading">Övning: click event och innerText</h2>
+        <button id="btn_DOM-1" class="btn_DOM-1">Write a message in console</button>
+        <br><br>
+        <p><button id="btn_DOM-2" class="btn_DOM-2">Increase</button><strong><span id="text_DOM-2"> 0</span></strong></p>
+        <br>
+        <button id="btn_DOM-3" class="btn_DOM-3">On</button>
+    </div>
+
+    <div class="practice_DOM">
+        <h2 class="heading">DOM: Övning 1</h2>
+        <p id="changeText">But I don't wanna change :(</p>
+    </div>
+
+    <div class="practice_DOM" id="changeDivText">
+        <h2 class="heading">DOM: Övning 2</h2>
+        <p>Everything is about to change...</p>
+    </div>
+
+    <div class="practice_DOM --smaller" id="addListElement">
+        <h2 class="heading">DOM: Övning 3</h2>
+        <ul id="addListELement_list">
+            <h5>Grocery list:</h5>
+            <li>Green eggs</li>
+            <li>Ham</li>
+        </ul>
+        <button id="addListElement_btn">Add new item</button>
+    </div>   
+
+    <div class="practice_DOM --wider" id="changeDiv">
+        <h2 class="heading">DOM: Övning 4</h2>
+        <button id="changeValue_btn">I need some change</button>
+        <div class="div-container">
+            <div class="changeValue_div">Telling javascript to do something</div>
+            <div class="changeValue_div">Telling javascript to do something</div>
+            <div class="changeValue_div">Telling javascript to do something</div>
+            <div class="changeValue_div">Telling javascript to do something</div>
+        </div>
+    </div>
+
+    <div class="practice_DOM" id="changeButtonClass">
+        <h2 class="heading">DOM: Övning 5 och 6</h2>
+        <button id="changeClass_id" class="class_happy">Toggle classes</button>
+    </div>
+
+    <div class="practice_DOM" id="changeSectionClasses_container">
+        <h2 class="heading">DOM: Övning 7</h2>
+        <button id="changeSectionClasses_btn">Change section classes</button>
+        <section>Section 1</section>
+        <section>Section 2</section>
+        <section>Section 3</section>
+        <section>Section 4</section>
+    </div>
+
+    <div class="practice_DOM" id="theList">
+        <h2 class="heading">DOM: Övning 8 och 9</h2>
+        <ul id="theList_parent">
+            <li id="theList_child">Child 1</li>
+            <li id="theList_child">Child 2</li>
+        </ul>
+        <button id="theList_btn">Count the children!</button>
+        <div id="theList_message"></div>
+    </div>
+
+    <div class="practice_DOM" id="deleteElement">
+        <h2 class="heading">DOM: Övning 10 och 11</h2>
+        <button id="deleteElement_btn">Delete element</button>
+        <p id="deleteElement_element">We can talk about it!! Please! Wait... Nooooooo</p> 
+    </div>
+
+    <div class="practice_DOM" id="twoLists">
+        <h2 class="heading">DOM: Övning 12</h2>
+        <button id="twoLists_btn">Move item to DONE</button>
+        <div class="lists">
+            <div class="list-container">
+                <h5>TO DO:</h5>
+                <ul id="todo">
+                    <li>Laundry</li>
+                    <li>Dishes</li>
+                    <li>Spell</li>
+                </ul>
+            </div>
+            <div class="list-container">
+                <h5>DONE</h5>
+                <ul id="done">
+            </div>
+        </div>
+
+        </ul>
+    </div>
+
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
