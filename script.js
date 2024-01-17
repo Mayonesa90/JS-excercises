@@ -243,3 +243,181 @@ twoLists_btn.addEventListener("click", () => {
     console.log(todoChild);
 })
 
+
+// ARRAYER
+
+// 1. let fruits = ["apple", "banana", "kiwi", "orange", "guanabana"];
+// 2. let dataTypes = ["string", 33, [1, 2, 3]];
+// 3. 
+/*
+let animals = ["cat", "hamster", "parrot", "funky chihuahua"];
+console.log(animals.length)
+*/
+// 4. console.log(animals[0])
+// 5. console.log(animals[3])
+// 6. animals[1] = "tiger";
+// 7.
+/*let a = [1, 2, 3];
+let b = [4, 5, 6];
+
+let together = a.concat(b);
+console.log(together);
+*/
+// 8.
+/*
+let a = [1, 2, 3, 7, 8, 9];
+let b = [4, 5, 6];
+let c = a.splice(3, 0, ...b);
+
+console.log(a);
+*/
+// 9. Klona array
+/*
+let arr = ["a", "b", "c"];
+let arrCopy = [...arr];
+console.log(arrCopy);
+*/
+
+// ARRAY METHODS
+
+//let fruits = ["kiwi", "apple", "pear"];
+
+// 10: Lägg till frukt i slutet av arrayen
+
+//fruits.push("banana");
+
+// 11. Lägg till frukt i början
+
+//fruits.unshift("mango");
+
+// 12. Ta bort sista frukten
+
+//fruits.pop();
+
+// 13. Ta bort första frukten
+
+//fruits.shift();
+
+// 14. Sätt in en frukt på index 1
+
+//fruits[1] = "guanabana";
+
+// 15. Sätt in tre frukter på index 2
+
+//fruits.splice(2, 0, "strawberry", "blueberry", "raspberry")
+
+// 16. Ta bort Christoffer ocg Johan
+
+let names = ["David", "Christoffer", "Johan", "Maja"];
+names.splice(1, 2);
+
+// 17. Spegelvänd arrayen ovan
+
+let str = 'Supercalifragilisticexpialidocious';
+let split = str.split("");
+let reverse = split.reverse();
+let join = reverse.join("");
+
+//console.log(join);
+
+// 18. Kolla om stringen innehåller bokstaven n
+
+let n = str.includes("n");
+
+// 19. Kolla om strängen innehåller bokstaven x
+
+let x = str.includes("x");
+
+// 20. Vilken position har första p:et
+
+let position = str.indexOf("p");
+
+// 21. Plocka fram de fem första tecknena
+
+let firstFive = str.slice(0, 5);
+
+// 22. Plocka fram de sju sista tecknena ---- KOLLA VILKA MER METODER MAN KAN ANVÄNDA
+
+let lastSeven = str.slice(27);
+
+
+// LOOPAR
+// Classic For loops
+
+// 1. Skapa en loop som iterar 100 varv
+/*
+for (let i = 0; i <= 1000; i++) {
+    console.log(`Du är på varv: ${i}`);
+}
+*/
+// 2. Skapa en loop som räknar ner från 100 till 0.
+/*
+for (let i = 100; i > 0; i--) {
+    console.log(`Varv: ${i}`);
+} 
+*/
+// 3. loopa arrayen med en for-loop
+
+let fruits = ["apple", "orange", "pear", "kiwi", "pineapple"];
+for (let i = 0; i < fruits.length; i++) {
+    console.log(`This is a ${fruits[i]}`);
+}
+
+// 4. Loopa ut arrayen, sätt vilken index varhe frukt har framför
+
+for (let i = 0; i < fruits.length; i++) {
+    console.log(`${i}: ${fruits[i]}`);
+}
+
+// FOR OF LOOPS
+
+// 6. Loopa ut ovanstående arrat och console.log varje pryl
+
+let things = ['hammer', 'nails', 'ruler', 'screwdriver', 'screws', 'saw'];
+for (let i = 0; i < things.length; i++) {
+    console.log(things[i]);
+}
+
+// FOR EACH LOOPS
+
+// 7. Loopa arrayen och console log varje pryl
+
+
+things.forEach((element) => console.log(element));
+
+
+// 8. samma som ovan men med positionen i arrayen den har ---- FINNS DET FLER METODER?
+/*
+for (let i = 0; i < things.length; i++) {
+    console.log(i + " " + things[i]);
+}
+*/
+//WHILE LOOPS
+
+// 9. skapa en while-loog som kör 1000 varv
+/*
+let i = 0;
+while (i <= 1000) {
+    console.log(`Du är på varv: ${i}`);
+    i++;
+}
+*/
+// LOOP DA LOOPS
+
+// 10. Generera en kortlek med 52 kort där varje kort innehåller en färg (suit) och ett värde mellan 2 och 14 (ess)
+
+function createCards() {
+    let cardColor = ["hjärter", "spader", "klöver", "ruter"];
+    //let cardNumber = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+    let i = 2;
+    while (i <= 13) {
+        console.log(`${cardColor[0]} ${i}`);
+        console.log(`${cardColor[1]} ${i}`);
+        console.log(`${cardColor[2]} ${i}`);
+        console.log(`${cardColor[3]} ${i}`)
+        i++;
+    }
+
+}
+
+createCards();
