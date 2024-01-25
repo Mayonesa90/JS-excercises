@@ -30,7 +30,7 @@ h1 {
     font-weight: 700;
 }
 
-p, button, input, li {
+p, button, input, li, select {
     font-size: 0.9rem;
 }
 
@@ -48,7 +48,7 @@ button {
     border-radius: 3px;
     color: rgb(243, 242, 241);
 */
-button {
+button, .button {
   appearance: button;
   backface-visibility: hidden;
   background-color: #405cf5;
@@ -132,7 +132,15 @@ input {
     background-color: rgb(224, 156, 215);
 }
 
-.practice_Conditions, .practice_Level-up, .practice_DOM{
+.practice_higher-order {
+    background-color: rgb(166, 228, 190);
+}
+
+.practice_callbacks {
+    background-color: rgb(219, 163, 177);
+}
+
+.practice_Conditions, .practice_Level-up, .practice_DOM, .practice_higher-order, .practice_callbacks {
     border-radius: 5px;
     width: 300px;
     padding: 30px;
@@ -175,6 +183,11 @@ input {
 
 .--wider {
     width: 45%;
+}
+
+.--wide {
+    width: 100%;
+    padding: 5px;
 }
 
 .class_happy {
@@ -249,4 +262,134 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#peeka_txt {
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+    padding: 10px;
+}
+
+.--center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+
+#key_txt {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 100px;
+    font-size: 50px;
+    margin-top: 70px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+select {
+    padding:5px;
+    color: #4e4e4e;
+    background-color: #E8F0FE;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+    background-color: #405cf5;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.change {
+    background-color: aqua;
+    border-radius: 50px;
+}
+
+.change2 {
+    background-color: yellow;
+    border-radius: 25px;
+}
+
+.change3 {
+    background-color: blue;
+    border-radius: 12.5px;    
+}
+
+.change4 {
+    background-color: blueviolet;
+    border-radius: 6.25px; 
+}
+
+.div-c {
+    width: 250px;
+    height: 250px;
+    border-radius: 50px;
+    background-color: rgb(129, 173, 158);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-justify: top;
+
+}
+
+.div-element {
+    width: 150px;
+    height: 150px;
+    border-radius: 25px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-justify: top;
+}
+
+.p-element {
+    width: 75px;
+    height: 75px;
+    border-radius: 12px;
+    background-color: rgb(75, 148, 124);
+}
+
+#txt_v1 {
+    position: relative;
+    top: -100px;
+    left: 75px;
+    font-size: 1.2rem;
+    font-family: "Reenie Beanie", cursive;
+    visibility: hidden;
+}
+#txt_v2 {
+    position: relative;
+    top: -60px;
+    left: 50px;
+    font-size: 1.2rem;
+    font-family: "Reenie Beanie", cursive;
+    visibility: hidden;
+}
+
+#txt_v3 {
+    position: relative;
+    top: 25px;
+    left: 10px;
+    font-size: 1.2rem;
+    font-family: "Reenie Beanie", cursive;
+    visibility: hidden;
 }
