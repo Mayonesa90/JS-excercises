@@ -902,13 +902,13 @@ div_container.addEventListener("mouseover", divc_funktion, true);
 
 // Övning 1: Grundläggande Callback
 
-function doAfterDelay(message, timer) {
-setTimeout(message, timer);
+function doAfterDelay(callback, time) {
+setTimeout(callback, time);
 }
 
-let message = () => console.log("Hello");
+let sendMessage = () => console.log("Hello");
 
-doAfterDelay(message, 5000);
+doAfterDelay(sendMessage, 5000);
 
 
 // ÖVNING 2: Array Iteration med Callbacks
@@ -926,73 +926,186 @@ presentera(presentation);
 // ÖVNING 3: Anpassa Callbacks
 let array1 = ["Fred", "Wilma", "Daphne", "Scooby Doo", "Shaggy"];
 let array2 = ["Buttercup", "Blossom", "Bubbles"]
-let newElement = "";
-let newString = [];
 
 let uc_btn = document.querySelector("#uc-btn");
 let lc_btn = document.querySelector("#lc-btn");
 let sc_btn = document.querySelector("#sc-btn");
 let pp_btn = document.querySelector("#pp-btn");
-let changeable_txt = document.querySelector("#changeable_text");
 
-const func = (newElement) => {
-    if (!newString.includes(newElement)) {
-        newString.push(newElement);
-    }
-}
+let chosenArray;
+let textThatIsShowing = document.querySelector("#changeable_text");
+
 
 const make_uc = (element) => {
-    newElement = element.toUpperCase();
-    func(newElement);
+    newArray = element.toUpperCase();
+    textThatIsShowing.innerText = newArray;
 }
 const make_lc = (element) => {
-    newElement = element.toLowerCase();
-    func(newElement);
+    newArray = element.toLowerCase()
+    textThatIsShowing.innerText = newArray;
 };
-const make_invisible = () => {changeable_txt.style.visibility = "hidden"}
+const update = (array) => textThatIsShowing.innerText = array;
 
 
 sc_btn.addEventListener("click", () => {
-    changeable_txt.innerText = array1 
+    chosenArray = array1;
+    update(array1);   
 })
+
 pp_btn.addEventListener("click", () => {
-    changeable_txt.innerText = array2; 
+    chosenArray = array2; 
+    update(array2); 
+
 })
+
 uc_btn.addEventListener("click", () => {
-    if (changeable_txt.innerText == array1) {
-        processElements(array1, make_uc)
-    } else {
-        processElements(array2, make_uc)
-    }
+    processElements(make_uc);
 })
 lc_btn.addEventListener("click", () => {
-    if (changeable_txt.innerText == array2) {
-        processElements(array2, make_lc)
-    } else {
-        processElements(array1, make_lc)
-    }
+    processElements(make_lc);
 })
 
-function processElements(array, callback) {
-    let result = array.forEach(callback);
-    //newString = array.push(newElement);
-    changeable_txt.innerText = newString;
-    console.log(array)
-    console.log(result)
-    console.log(newElement)
-    console.log(changeable_txt.textContent)
+function processElements(callback) {
+    newArray = chosenArray.join();
+    callback(newArray);
 }
 
-//processElements(array1, make_lc)
  
 // ÖVNING:4 ASYNKRON CALLBACK
 
 function callback_one(value){
-    setTimeout(value, 6000)
+    setTimeout(() => {
+    console.log(value);
+    }, 6000) 
 } 
 
 function simulateAsyncOperation(value, callback) {
-    
+    callback(value);
 }
 
-simulateAsyncOperation("whattap", callback_one)
+simulateAsyncOperation("ketchup", callback_one)
+
+
+// ÖVNINGAR: grunder functions och higher order functions
+
+//1. Skapa en funktion
+
+function summa(a, b) {
+    return a*b;
+}
+console.log(summa(2, 3))
+
+//2. Räkna
+
+function count(num){
+    for (let i=1; i <= num; i++) {
+        console.log(i)
+    }
+}
+count(20);
+
+//3. Skriv ut förnamn
+
+function writeName(name){
+    console.log(`Hello ${name}`)
+}
+
+writeName("Maya");
+
+//4. Skriv ut hela namnet
+
+let writeFullName = (fname, lname) => console.log(`Firstname: ${fname}, Lastname: ${lname}`)
+
+writeFullName("Maya", "Yauri");
+
+//5. Räkna baklänges
+
+function countBackwards(num) {
+    for (let i=num; i > 0; i--) {
+        console.log(i)
+    }
+}
+
+countBackwards(10);
+
+//6. Arrow function
+
+let summan = (a, b) => a+b;
+console.log(summan(2,3));
+
+//7. Dubblera ett tal
+
+let dubbelt = (a) => a*2;
+console.log(dubbelt(2));
+
+//8. Filter()
+
+let arrayMedNummer = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let oddNum = arrayMedNummer.filter((num) => (num % 2)!== 0);
+console.log(oddNum)
+
+//9. Map()
+let array_one = ["one", "two", "three"];
+let reversedStrings = array_one.map(function(string) {
+    return string.split('').reverse().join('');
+})
+
+let reversedArray = array_one.toReversed();
+
+console.log(reversedStrings)
+
+//10. Reduce
+
+let numArr = Array.from(Array(10).keys(1));
+let sumOfArr = numArr.reduce((acc, object) => {
+    return acc + object;
+})
+
+console.log(sumOfArr)
+
+//11. Hitta det största talet
+
+let largestNum = Math.max(...numArr)
+console.log(largestNum)
+
+//12. Använd .forEach()
+
+let showNames = (array) => array.forEach((element) => {
+    console.log(element)
+})
+
+showNames(array2)
+
+//13. Använd .map() och filter()
+let myPeople = [
+    {
+        name: "Anneli",
+        age: 65
+    },
+    {
+        name: "Alberto",
+        age: 71
+    },
+    {
+        name: "Isabel",
+        age: 26
+    },
+    {
+        name: "Sebastian",
+        age: 39
+    }
+]
+
+let underForty = console.log(myPeople.filter((object) => object.age > 40).map((i) => i.name))
+
+//14. Skriv en egen HOF
+
+function callFunc(callback, message) {
+callback(message);
+}
+
+function callbackFunc(message) {
+    console.log(message)
+}
+
+callFunc(callbackFunc, "Hello");
